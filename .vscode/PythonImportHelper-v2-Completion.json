@@ -1,0 +1,687 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template_string",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "mysql.connector",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "Error",
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "isExtraImport": true,
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "Markup",
+        "importPath": "markupsafe",
+        "description": "markupsafe",
+        "isExtraImport": true,
+        "detail": "markupsafe",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "qrcode",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "qrcode",
+        "description": "qrcode",
+        "detail": "qrcode",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageDraw",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageFont",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "blockchain",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "blockchain",
+        "description": "blockchain",
+        "detail": "blockchain",
+        "documentation": {}
+    },
+    {
+        "label": "winsound",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "winsound",
+        "description": "winsound",
+        "detail": "winsound",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "secure_filename",
+        "importPath": "werkzeug.utils",
+        "description": "werkzeug.utils",
+        "isExtraImport": true,
+        "detail": "werkzeug.utils",
+        "documentation": {}
+    },
+    {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "dbconnection",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def dbconnection():\n    con = mq.connect(host='localhost', database='fakeproduct',user='root',password='root')\n    return con\n@app.route('/')\ndef home():\n    return render_template('index.html', title='home')\n@app.route('/loginpage')\ndef loginpage():\n    return render_template('login.html',title='login')\n@app.route('/userregisterpage')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def home():\n    return render_template('index.html', title='home')\n@app.route('/loginpage')\ndef loginpage():\n    return render_template('login.html',title='login')\n@app.route('/userregisterpage')\ndef registerpage():\n    return render_template('userregister.html',title='register')\n@app.route('/addproductpage')\ndef addproductpage():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "loginpage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def loginpage():\n    return render_template('login.html',title='login')\n@app.route('/userregisterpage')\ndef registerpage():\n    return render_template('userregister.html',title='register')\n@app.route('/addproductpage')\ndef addproductpage():\n    return render_template('addproduct.html',title='addproduct')\n@app.route('/sellproductpage')\ndef sellproductpage():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "registerpage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def registerpage():\n    return render_template('userregister.html',title='register')\n@app.route('/addproductpage')\ndef addproductpage():\n    return render_template('addproduct.html',title='addproduct')\n@app.route('/sellproductpage')\ndef sellproductpage():\n    return render_template('sellproduct.html',title='sell product')\n@app.route('/verifyproductspage')\ndef verifyproductspage():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "addproductpage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def addproductpage():\n    return render_template('addproduct.html',title='addproduct')\n@app.route('/sellproductpage')\ndef sellproductpage():\n    return render_template('sellproduct.html',title='sell product')\n@app.route('/verifyproductspage')\ndef verifyproductspage():\n    return render_template('verifyproducts.html',title='verify')\n@app.route('/customerfeedbackpage')\ndef customerfeedbackpage():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "sellproductpage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def sellproductpage():\n    return render_template('sellproduct.html',title='sell product')\n@app.route('/verifyproductspage')\ndef verifyproductspage():\n    return render_template('verifyproducts.html',title='verify')\n@app.route('/customerfeedbackpage')\ndef customerfeedbackpage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from seller\")",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "verifyproductspage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def verifyproductspage():\n    return render_template('verifyproducts.html',title='verify')\n@app.route('/customerfeedbackpage')\ndef customerfeedbackpage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from seller\")\n    res = cursor.fetchall()\n    return render_template('customerfeedback.html',title='feedback',res=res)\n@app.route('/sellergivefeedbackpage')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "customerfeedbackpage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def customerfeedbackpage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from seller\")\n    res = cursor.fetchall()\n    return render_template('customerfeedback.html',title='feedback',res=res)\n@app.route('/sellergivefeedbackpage')\ndef sellergivefeedbackpage():\n    con = dbconnection()\n    cursor = con.cursor()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "sellergivefeedbackpage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def sellergivefeedbackpage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from manufacturer\")\n    res = cursor.fetchall()\n    return render_template('sellergivefeedback.html',title='feedback',res=res)\n@app.route('/viewsellerfeedbackspage')\ndef viewsellerfeedbackspage():\n    con = dbconnection()\n    cursor = con.cursor()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "viewsellerfeedbackspage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def viewsellerfeedbackspage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from customerfeedbacks left join customer on customerfeedbacks.cid=customer.id  where customerfeedbacks.sid={}  order by customerfeedbacks.id desc\".format(\n        int(session['sid'])))\n    res = cursor.fetchall()\n    # Convert the rating values to floats\n    res_with_float_ratings = [(item[0], float(item[1]), item[2], item[3], item[4], item[5], item[6],item[7]) for item in res]\n    return render_template('sellerfeedbacks.html',res=res_with_float_ratings)\n@app.route('/viewmanufacturerfeedbackspage')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "viewmanufacturerfeedbackspage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def viewmanufacturerfeedbackspage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from sellerfeedbacks left join seller on sellerfeedbacks.sid=seller.id  where sellerfeedbacks.mid={}  order by sellerfeedbacks.id desc\".format(\n        int(session['mid'])))\n    res = cursor.fetchall()\n    # Convert the rating values to floats\n    res_with_float_ratings = [(item[0], float(item[1]), item[2], item[3], item[4], item[5], item[6], item[7]) for item in res]\n    # Calculate average rating\n    avg_rating = round(sum([r[1] for r in res_with_float_ratings]) / len(res_with_float_ratings), 1) if res_with_float_ratings else 0",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "mviewproductspage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def mviewproductspage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from products where mid={}\".format(int(session['mid'])))\n    res = cursor.fetchall()\n    if res==[]:\n        flash(\"Products Not Found\")\n    return render_template('mviewproducts.html',res=res)\n@app.route('/cviewproductspage')\ndef cviewproductspage():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "cviewproductspage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def cviewproductspage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from products\")\n    res = cursor.fetchall()\n    if res==[]:\n        flash(\"Products Not Found\")\n    return render_template('cviewproducts.html',res=res)\n@app.route('/sellproduct')\ndef sellproduct():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "sellproduct",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def sellproduct():\n    id = request.args.get(\"id\")\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from seller \")\n    res = cursor.fetchall()\n    if res==[]:\n        flash(\"Sellers Not Found\")\n    return render_template('sellerslist.html',res=res,id=id)\n@app.route('/soldproductspage')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "soldproductspage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def soldproductspage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from transactions left join products on transactions.pid=products.id left join seller on transactions.sid=seller.id where transactions.mid={} order by transactions.id desc\".format(\n        int(session['mid'])\n    ))\n    res = cursor.fetchall()\n    if res==[]:\n        flash(\"Products Not Found\")\n    return render_template('soldproducts.html',res=res)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "purchasedproductspage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def purchasedproductspage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from transactions left join products on transactions.pid=products.id left join manufacturer on transactions.mid=manufacturer.id where transactions.sid={} order by transactions.id desc\".format(\n        int(session['sid'])\n    ))\n    res = cursor.fetchall()\n    if res==[]:\n        flash(\"Products Not Found\")\n    return render_template('purchasedproducts.html',res=res)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def register():\n    if request.method == 'POST':\n        name = request.form['name']\n        email = request.form['email']\n        phone = request.form['phone']\n        ras = request.form['ras']\n        address = request.form['address']\n        password = request.form['password']\n        con = dbconnection()\n        cursor = con.cursor()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def login():\n    if request.method == 'POST':\n        email = request.form['email']\n        password = request.form['password']\n        ltype = request.form['ltype']\n        con = dbconnection()\n        cursor = con.cursor()\n        if ltype=='Manufacturer':\n            cursor.execute(\"select * from Manufacturer where email='{}' and password='{}'\".format(email,password))\n            res = cursor.fetchall()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "generate_qr",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def generate_qr(pname, pid, price):\n    # Set image dimensions and background color\n    id_card_width, id_card_height = 400, 600\n    background_color = (255, 255, 255)  # White background\n    # Create a blank ID card image\n    id_card = Image.new('RGB', (id_card_width, id_card_height), background_color)\n    draw = ImageDraw.Draw(id_card)\n    # Load font\n    font = ImageFont.truetype(\"arial.ttf\", size=20)\n    # Generate and place the QR code",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "saveproduct",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def saveproduct():\n    pname = request.form['pname']\n    pid = request.form['pid']\n    price = request.form['price']\n    des = request.form['des']\n    mfg_date = request.form['mfg_date']\n    exp_date = request.form['exp_date']\n    ingredients = request.form['ingredients']\n    image_file = request.files['image']  # Image input field name should be 'image'\n    con = dbconnection()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "search_product",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def search_product():\n    con = dbconnection()\n    cursor = con.cursor()\n    search_query = request.args.get('query', '')\n    if search_query:\n        # Secure parameterized query\n        cursor.execute(\"\"\"\n            SELECT * FROM products \n            WHERE (pname LIKE %s OR pid LIKE %s) AND mid = %s\n        \"\"\", (f\"%{search_query}%\", f\"%{search_query}%\", int(session['mid'])))",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "search_product2",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def search_product2():\n    con = dbconnection()\n    cursor = con.cursor()\n    search_query = request.args.get('query', '')\n    if search_query:\n        # Secure parameterized query\n        cursor.execute(\"\"\"\n            SELECT * FROM products \n            WHERE (pname LIKE %s OR pid LIKE %s) AND mid = %s\n        \"\"\", (f\"%{search_query}%\", f\"%{search_query}%\", int(session['mid'])))",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "sell",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def sell():\n    sid = request.args.get('sid')\n    pid = request.args.get('pid')\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from products where id={} and mid={}\".format(int(pid),int(session['mid'])))\n    res = cursor.fetchall()\n    productserialid = res[0][2]\n    cursor.execute(\"insert into transactions (sid,mid,pid,productserial) values ({},{},{},'{}')\".format(\n       int(sid), int(session['mid']), int(pid), productserialid",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "mark_attendance",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def mark_attendance(decodedText):\n    winsound.Beep(1000,1000)\n    con = dbconnection()\n    cursor = con.cursor()\n    qrdata = decodedText.strip()\n    verificationresult=\"Fake\"\n    # Check if the USN exists in the student registration table\n    cursor.execute(\"SELECT * from products where pid='{}'\".format(\n        qrdata\n    ))",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "csavefeedback",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def csavefeedback():\n    if request.method == 'POST':\n        sid = request.form['sid']\n        star = request.form['star']\n        description = request.form['description']\n        con = dbconnection()\n        cursor = con.cursor()\n        cursor.execute(\"insert into customerfeedbacks(rating,description,cid,sid)values('{}','{}',{},{})\".format(\n            int(star),description,int(session['cid']),int(sid)))\n        con.commit()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "ssavefeedback",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def ssavefeedback():\n    if request.method == 'POST':\n        mid = request.form['mid']\n        star = request.form['star']\n        description = request.form['description']\n        con = dbconnection()\n        cursor = con.cursor()\n        cursor.execute(\"insert into sellerfeedbacks(rating,description,sid,mid)values('{}','{}',{},{})\".format(\n            int(star),description,int(session['sid']),int(mid)))\n        con.commit()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "aviewdonorspage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def aviewdonorspage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from donors\")\n    res = cursor.fetchall()\n    return render_template('aviewdonors.html',title='donors',res=res)\n@app.route('/aviewreceiverspage')\ndef aviewreceiverspage():\n    con = dbconnection()\n    cursor = con.cursor()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "aviewreceiverspage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def aviewreceiverspage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from receivers\")\n    res = cursor.fetchall()\n    return render_template('aviewreceivers.html',title='receivers',res=res)\n@app.route('/mapreceiver')\ndef mapreceiver():\n    donationid = request.args.get('id')\n    con = dbconnection()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "mapreceiver",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def mapreceiver():\n    donationid = request.args.get('id')\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from receivers\")\n    res = cursor.fetchall()\n    return render_template('mapreceivers.html',title='receivers',res=res,donationid=donationid)\n@app.route('/donatepage')\ndef donatepage():\n    return render_template('donate.html',title='donate')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "donatepage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def donatepage():\n    return render_template('donate.html',title='donate')\n@app.route('/mydonationspage')\ndef mydonationspage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"\"\"\n    SELECT donations.*, receivers.*, bridge.*\n    FROM donations\n    LEFT JOIN bridge ON donations.id = bridge.donationid",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "mydonationspage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def mydonationspage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"\"\"\n    SELECT donations.*, receivers.*, bridge.*\n    FROM donations\n    LEFT JOIN bridge ON donations.id = bridge.donationid\n    LEFT JOIN receivers ON bridge.rid = receivers.id\n    WHERE donations.did = %s\n    AND donations.status IN ('Pending', 'Assigned', 'Accepted')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "dcompleteddonations",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def dcompleteddonations():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from donations inner join bridge on donations.id=bridge.donationid  inner join receivers on bridge.rid=receivers.id where donations.status='{}' and donations.did={}\".format(\"Completed\",int(session['did'])))\n    res = cursor.fetchall()\n    return render_template('dcompleteddonations.html',title='receivers',res=res)\n@app.route('/aviewdonationsspage')\ndef aviewdonationsspage():\n    con = dbconnection()\n    cursor = con.cursor()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "aviewdonationsspage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def aviewdonationsspage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from donations left join donors on donations.did=donors.id where donations.status='{}'\".format(\"Pending\"))\n    res = cursor.fetchall()\n    if res==[]:\n        flash(\"No Pending Donations Found\")\n    return render_template('aviewdonations.html',title='donations',res=res)\n@app.route('/donordashboard')\ndef donordashboard():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "donordashboard",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def donordashboard():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from donors where id={}\".format(int(session['did'])))\n    res = cursor.fetchall()\n    cursor.execute(\"select count(*) AS row_count from donations where did={}\".format(int(session['did'])))\n    result = cursor.fetchone()\n    row_count = result[0]\n    cursor.close()\n    con.close()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "receiverdashboard",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def receiverdashboard():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from receivers where id={}\".format(int(session['rid'])))\n    res = cursor.fetchall()\n    cursor.execute(\"select count(*) AS row_count from bridge where rid={} and status='{}'\".format(int(session['rid']),\"Accepted\"))\n    result = cursor.fetchone()\n    row_count = result[0]\n    cursor.close()\n    con.close()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "receiveddonationspage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def receiveddonationspage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from bridge inner join donations on donations.id=bridge.donationid inner join donors on donations.did=donors.id where bridge.rid={} and bridge.status='{}'\".format(\n        int(session['rid']),\"Pending\"\n    ))\n    res = cursor.fetchall()\n    if res==[]:\n        flash(\"No Pending Donations Found\")\n    return render_template('rviewdonations.html',title='donations',res=res)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "raccepteddonations",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def raccepteddonations():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from bridge inner join donations on donations.id=bridge.donationid inner join donors on donations.did=donors.id where bridge.status='{}' and bridge.rid={}\".format(\n        \"Accepted\",int(session['rid'])\n    ))\n    res = cursor.fetchall()\n    return render_template('raccepteddonations.html',title='donations',res=res)\n@app.route('/rrejecteddonations')\ndef rrejecteddonations():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "rrejecteddonations",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def rrejecteddonations():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from bridge inner join donations on donations.id=bridge.donationid inner join donors on donations.did=donors.id where bridge.status='{}' and bridge.rid={}\".format(\n        \"Rejected\",int(session['rid'])\n    ))\n    res = cursor.fetchall()\n    if res==[]:\n        flash(\"No Rejected Donations\")\n    return render_template('rrejecteddonations.html',title='donations',res=res)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "savemaping",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def savemaping():\n    donationid = request.args.get(\"donationid\")\n    rid = request.args.get(\"rid\")\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"insert into bridge (rid,donationid,status)values({},{},'{}')\".format(\n                    int(rid),int(donationid),\"Pending\"))\n    con.commit()\n    cursor.execute(\"update donations set status='{}' where id={}\".format(\"Assigned\",int(donationid)))\n    con.commit()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "acceptdonation",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def acceptdonation():\n    donationid = request.args.get(\"donationid\")\n    print(donationid)\n    bid = request.args.get(\"bid\")\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"update bridge set status='{}' where id={}\".format(\"Accepted\",int(bid)))\n    con.commit()\n    cursor.execute(\"update donations set status='{}' where id={}\".format(\"Accepted\",int(donationid)))\n    con.commit()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "rejectdonation",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def rejectdonation():\n    donationid = request.args.get(\"donationid\")\n    bid = request.args.get(\"bid\")\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"update bridge set status='{}' where id={}\".format(\"Rejected\",int(bid)))\n    con.commit()\n    cursor.execute(\"update donations set status='{}' where id={}\".format(\"Pending\",int(donationid)))\n    con.commit()\n    con.close()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "finished",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def finished():\n    donationid = request.args.get(\"id\")\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"update donations set status='{}' where id={}\".format(\"Completed\",int(donationid)))\n    con.commit()\n    con.close()\n    flash(\"Donation Completed\")\n    return redirect(url_for('mydonationspage'))\n@app.route('/dsavefeedback', methods=['GET', 'POST'])",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "dsavefeedback",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def dsavefeedback():\n    if request.method == 'POST':\n        rid = request.form['rid']\n        star = request.form['star']\n        description = request.form['description']\n        con = dbconnection()\n        cursor = con.cursor()\n        cursor.execute(\"insert into receiverfeedbacks(rating,description,did,rid)values('{}','{}',{},{})\".format(\n            int(star),description,int(session['did']),int(rid)))\n        con.commit()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "dviewmyfeedbacks",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def dviewmyfeedbacks():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from donorfeedbacks left join receivers on donorfeedbacks.rid=receivers.id order by donorfeedbacks.id desc\")\n    res = cursor.fetchall()\n    # Convert the rating values to floats\n    res_with_float_ratings = [(item[0], float(item[1]), item[2], item[3], item[4], item[5], item[6],item[7]) for item in res]\n    return render_template('dviewmyfeedbacks.html',res=res_with_float_ratings)\n@app.route('/rviewfeedbackpage')\ndef rviewfeedbackpage():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "rviewfeedbackpage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def rviewfeedbackpage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from receiverfeedbacks left join donors on receiverfeedbacks.did=donors.id order by receiverfeedbacks.id desc\")\n    res = cursor.fetchall()\n    # Convert the rating values to floats\n    res_with_float_ratings = [(item[0], float(item[1]), item[2], item[3], item[4], item[5], item[6],item[7]) for item in res]\n    return render_template('rviewfeedback.html',res=res_with_float_ratings)\n@app.route('/rsavefeedback', methods=['GET', 'POST'])\ndef rsavefeedback():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "rsavefeedback",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def rsavefeedback():\n    if request.method == 'POST':\n        did = request.form['did']\n        star = request.form['star']\n        description = request.form['description']\n        con = dbconnection()\n        cursor = con.cursor()\n        cursor.execute(\"insert into donorfeedbacks(rating,description,did,rid)values('{}','{}',{},{})\".format(\n            int(star),description,int(did),int(session['rid'])))\n        con.commit()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "forgot_password",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def forgot_password():\n    user_type = request.form['userType']\n    email = request.form['email']\n    con = dbconnection()\n    cursor = con.cursor()\n    if user_type==\"Donor\":\n        cursor.execute(\"select * from donors where email='{}'\".format(email))\n        res = cursor.fetchall()\n        if res!=[]:\n            subject = \"Your Password for Hunger Bridge\"",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__)\napp.config['SECRET_KEY'] = 'secret_key'\nmyblockchain = blockchain.Blockchain()\ndef dbconnection():\n    con = mq.connect(host='localhost', database='fakeproduct',user='root',password='root')\n    return con\n@app.route('/')\ndef home():\n    return render_template('index.html', title='home')\n@app.route('/loginpage')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['SECRET_KEY']",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config['SECRET_KEY'] = 'secret_key'\nmyblockchain = blockchain.Blockchain()\ndef dbconnection():\n    con = mq.connect(host='localhost', database='fakeproduct',user='root',password='root')\n    return con\n@app.route('/')\ndef home():\n    return render_template('index.html', title='home')\n@app.route('/loginpage')\ndef loginpage():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "myblockchain",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "myblockchain = blockchain.Blockchain()\ndef dbconnection():\n    con = mq.connect(host='localhost', database='fakeproduct',user='root',password='root')\n    return con\n@app.route('/')\ndef home():\n    return render_template('index.html', title='home')\n@app.route('/loginpage')\ndef loginpage():\n    return render_template('login.html',title='login')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "Block",
+        "kind": 6,
+        "importPath": "blockchain",
+        "description": "blockchain",
+        "peekOfCode": "class Block:\n    def __init__(self, index, timestamp, sellerid, mid, pid, previous_hash):\n        self.index = index\n        self.timestamp = timestamp\n        self.sellerid = sellerid\n        self.mid = mid\n        self.pid = pid\n        self.previous_hash = previous_hash\n        self.hash = self.calculate_hash()\n    def calculate_hash(self):",
+        "detail": "blockchain",
+        "documentation": {}
+    },
+    {
+        "label": "Blockchain",
+        "kind": 6,
+        "importPath": "blockchain",
+        "description": "blockchain",
+        "peekOfCode": "class Blockchain:\n    def __init__(self):\n        self.chain = []\n        self.create_genesis_block()\n        self.load_chain()  # Load the existing blockchain data if it exists\n    def create_genesis_block(self):\n        genesis_block = Block(0, time(), None, None, None, \"0\")\n        self.chain.append(genesis_block)\n    def add_block(self, sellerid, mid, pid):\n        previous_block = self.chain[-1]",
+        "detail": "blockchain",
+        "documentation": {}
+    }
+]

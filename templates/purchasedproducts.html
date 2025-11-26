@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purchased Product</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-pink-50 text-gray-800 min-h-screen">
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r from-pink-500 to-red-400 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-lg font-bold flex items-center gap-2">
+        <i class="fas fa-heart text-white"></i>
+        <span>Cosmetic Authenticity</span>
+      </div>
+      <div class="space-x-4 text-sm">
+        <a href="purchasedproductspage"
+          class="px-4 py-2 rounded bg-white text-pink-600 font-semibold hover:bg-pink-100">Purchased Products</a>
+        <a href="sellergivefeedbackpage" class="hover:underline">Give Feedback</a>
+        <a href="viewsellerfeedbackspage" class="hover:underline">Feedbacks</a>
+        <a href="/" class="hover:underline">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Flash Messages -->
+  <div class="max-w-7xl mx-auto px-4 mt-4">
+    {% for message in get_flashed_messages() %}
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">{{ message }}</div>
+    {% endfor %}
+  </div>
+
+  <!-- Modal for Camera Feed -->
+  <div id="cameraModal" class="fixed inset-0 z-50 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg w-full max-w-lg relative">
+      <button onclick="closeCameraModal()" class="absolute top-2 right-2 text-red-500 font-bold">CLOSE X</button>
+      <h2 class="text-xl font-bold mb-4">Scan QR Code</h2>
+      <div id="cameraFeed" class="w-full border border-black"></div>
+      <p id="productmessage" class="mt-4 text-center text-pink-600 font-semibold"></p>
+    </div>
+  </div>
+
+  <!-- Purchased Product Cards -->
+  <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for r in res %}
+    <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-all">
+      {% if r[11] %}
+      <img src="../static/images/productimages/{{ r[11] }}" alt="Product Image" class="w-full h-48 object-cover">
+      {% endif %}
+      <div class="p-4">
+        <h2 class="text-pink-600 font-bold text-lg mb-2">Product Details</h2>
+        <p><span class="font-semibold text-gray-700">Product Name:</span> {{ r[6] }}</p>
+        <p><span class="font-semibold text-gray-700">Product ID:</span> {{ r[7] }}</p>
+        <p><span class="font-semibold text-gray-700">Price:</span> {{ r[8] }}</p>
+        <p><span class="font-semibold text-gray-700">Manufacturing Date:</span> {{ r[13] }}</p>
+        <p><span class="font-semibold text-gray-700">Expiry Date:</span> {{ r[14] }}</p>
+        <p><span class="font-semibold text-gray-700">Manufacturer:</span> {{ r[17] }}</p>
+        <p><span class="font-semibold text-gray-700">Email:</span> {{ r[18] }}</p>
+        <p><span class="font-semibold text-gray-700">Phone:</span> {{ r[19] }}</p>
+        <p><span class="font-semibold text-gray-700">Address:</span>
+          <textarea readonly rows="3"
+            class="w-full bg-gray-100 border border-gray-300 rounded p-2 mt-1">{{ r[20] }}</textarea>
+        </p>
+      </div>
+      <div class="px-4 pb-4">
+        <a href="#" onclick="openCameraModal()"
+          class="block w-full text-center bg-pink-600 text-white font-bold py-2 rounded mb-2 hover:bg-pink-700 transition">Verify
+          Product</a>
+        <a href="../{{r[10]}}" download
+          class="block w-full text-center bg-gray-800 text-white font-bold py-2 rounded hover:bg-pink-700 transition">Download
+          QR Code</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <script src="../static/html5-qrcode.min.js"></script>
+  <script>
+    let html5QrCode;
+
+    function openCameraModal() {
+      document.getElementById('cameraModal').classList.remove('hidden');
+      startCamera();
+    }
+
+    function closeCameraModal() {
+      document.getElementById('cameraModal').classList.add('hidden');
+      stopCamera();
+    }
+
+    function startCamera() {
+      html5QrCode = new Html5Qrcode("cameraFeed");
+      html5QrCode.start(
+        { facingMode: "environment" },
+        {
+          fps: 10,
+          qrbox: { width: 250, height: 250 },
+        },
+        (decodedText) => {
+          stopCamera();
+          checkproduct(decodedText);
+        },
+        (errorMessage) => {
+          console.log("QR code scanning error:", errorMessage);
+        }
+      ).catch(err => {
+        console.error("Unable to start the camera:", err);
+      });
+    }
+
+    function stopCamera() {
+      if (html5QrCode) {
+        html5QrCode.stop().then(() => {
+          html5QrCode.clear();
+        }).catch((err) => console.error("Failed to stop camera:", err));
+      }
+    }
+
+    function checkproduct(decodedText) {
+      fetch(`/checkproductqr/${decodedText}`)
+        .then((response) => response.json())
+        .then((data) => {
+          document.getElementById("productmessage").innerText = data.message;
+        })
+        .catch((error) => {
+          console.error("Error Verifying Product:", error);
+          document.getElementById("productmessage").innerText = "Error Verifying Product.";
+        });
+    }
+  </script>
+</body>
+
+</html>

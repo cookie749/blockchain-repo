@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Products</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="min-h-screen bg-pink-50 text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r from-pink-500 to-red-400 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-lg font-bold flex items-center gap-2">
+        <i class="fas fa-heart text-white"></i>
+        <span>Cosmetic Authenticity</span>
+      </div>
+      <div class="space-x-4 text-sm">
+        <a href="addproductpage" class="hover:underline">Add Product</a>
+        <a href="mviewproductspage"
+          class="px-4 py-2 rounded bg-white text-pink-600 font-semibold hover:bg-pink-100">View Products</a>
+        <a href="soldproductspage" class="hover:underline">Sold Products</a>
+        <a href="viewmanufacturerfeedbackspage" class="hover:underline">Feedbacks</a>
+        <a href="/" class="hover:underline">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="max-w-7xl mx-auto px-4 py-10">
+    <div class="text-center mb-6">
+      <input type="text" id="search" onkeyup="searchEvents()" placeholder="Search by Product Name or ID"
+        class="w-full max-w-md px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-pink-300 focus:outline-none">
+      <div class="text-red-500 text-sm mt-2">
+        {% for message in get_flashed_messages() %}
+        {{ message }}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div id="event-results" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {% for r in res %}
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="bg-pink-100 text-pink-600 font-bold text-center py-2">Product Details</div>
+        <img src="../static/images/productimages/{{ r[6] }}" alt="Product Image" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <p class="mb-2"><span class="font-semibold text-pink-600">Product Name:</span> {{ r[1] }}</p>
+          <p class="mb-2"><span class="font-semibold text-pink-600">Product ID:</span> {{ r[2] }}</p>
+          <p class="mb-2"><span class="font-semibold text-pink-600">Price:</span> ₹{{ r[3] }}</p>
+
+          <p class="mb-2">
+            <span class="font-semibold text-pink-600">Description:</span>
+            <textarea rows="2" readonly
+              class="w-full mt-1 p-2 bg-gray-100 rounded text-sm resize-none">{{ r[4] }}</textarea>
+          </p>
+
+          <!-- Manufacturing Date -->
+          <p class="mb-2"><span class="font-semibold text-pink-600">Manufacturing Date:</span> {{ r[8] }}</p>
+
+          <!-- Expiry Date -->
+          <p class="mb-2"><span class="font-semibold text-pink-600">Expiry Date:</span> {{ r[9] }}</p>
+
+          <!-- Ingredients -->
+          <p class="mb-2">
+            <span class="font-semibold text-pink-600">Ingredients:</span>
+            <textarea rows="2" readonly
+              class="w-full mt-1 p-2 bg-gray-100 rounded text-sm resize-none">{{ r[10] }}</textarea>
+          </p>
+
+          <div class="flex flex-col gap-2 mt-4">
+            <a href="sellproduct?id={{r[0]}}"
+              class="text-center bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-md font-semibold">Sell
+              Product</a>
+            <a href="../{{r[5]}}"
+              class="text-center bg-gray-800 hover:bg-gray-900 text-white py-2 rounded-md font-semibold"
+              download>Download QR Code</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <script>
+    function searchEvents() {
+      const searchQuery = document.getElementById('search').value;
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', '/search_product?query=' + encodeURIComponent(searchQuery), true);
+      xhr.onload = function () {
+        if (this.status === 200) {
+          document.getElementById('event-results').innerHTML = '';
+          document.getElementById('event-results').innerHTML = this.responseText;
+        }
+      };
+      xhr.send();
+    }
+  </script>
+
+</body>
+
+</html>

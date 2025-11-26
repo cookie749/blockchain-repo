@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sellers List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="min-h-screen bg-pink-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r from-pink-500 to-red-400 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-lg font-bold flex items-center gap-2">
+        <i class="fas fa-heart text-white"></i>
+        <span>Fake Product Detection</span>
+      </div>
+      <div class="space-x-4 text-sm">
+        <a href="addproductpage" class="hover:underline">Add Product</a>
+        <a href="mviewproductspage" class="hover:underline">View Products</a>
+        <a href="soldproductspage" class="hover:underline">Sold Products</a>
+        <a href="/" class="hover:underline">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="max-w-7xl mx-auto px-4 py-10">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold text-pink-600 mb-4">SELLERS LIST</h1>
+      <div class="text-red-500 text-sm">
+        {% for message in get_flashed_messages() %}
+        {{ message }}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="overflow-x-auto bg-white shadow-md rounded-lg">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-pink-100 text-pink-600 uppercase text-sm">
+          <tr>
+            <th class="px-6 py-3 text-left font-semibold">Seller Name</th>
+            <th class="px-6 py-3 text-left font-semibold">Email</th>
+            <th class="px-6 py-3 text-left font-semibold">Phone</th>
+            <th class="px-6 py-3 text-left font-semibold">Address</th>
+            <th class="px-6 py-3 text-left font-semibold">Action</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          {% for r in res %}
+          <tr class="hover:bg-pink-50 transition">
+            <td class="px-6 py-4">{{ r[1] }}</td>
+            <td class="px-6 py-4">{{ r[2] }}</td>
+            <td class="px-6 py-4">{{ r[3] }}</td>
+            <td class="px-6 py-4">
+              <textarea rows="2" readonly
+                class="w-full p-2 bg-gray-100 rounded text-sm resize-none">{{ r[4] }}</textarea>
+            </td>
+            <td class="px-6 py-4">
+              <a href="sell?sid={{r[0]}}&pid={{id}}"
+                class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-md font-semibold transition">
+                Sell
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+
+</html>

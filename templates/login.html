@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Cosmetic Authentication</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            pop: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-pink-50 font-pop text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r from-pink-500 to-red-400 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-lg font-bold flex items-center gap-2">
+        <i class="fas fa-heart text-white"></i>
+        <span>Cosmetic Authenticity</span>
+      </div>
+      <div class="space-x-4 text-sm">
+        <a href="/" class="hover:underline">Home</a>
+        <a href="/loginpage" class="px-4 py-2 rounded bg-white text-pink-600 font-semibold hover:bg-pink-100">Login</a>
+        <a href="/userregisterpage" class="hover:underline">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Flash Message -->
+  <div class="max-w-xl mx-auto px-4 mt-6">
+    {% for message in get_flashed_messages() %}
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4 text-center">
+      {{ message }}
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Login Card -->
+  <div class="max-w-xl mx-auto px-4 py-10">
+    <div class="bg-white p-8 rounded-xl shadow-lg">
+      <h2 class="text-2xl font-bold text-pink-600 text-center mb-6">Login</h2>
+
+      <form action="/login" method="POST" class="space-y-5">
+
+        <div>
+          <label for="ltype" class="block mb-1 font-medium">Login Type</label>
+          <select name="ltype" id="ltype" required
+            class="w-full px-3 py-2 border rounded-md bg-gray-50 focus:ring-2 focus:ring-pink-400">
+            <option value="Manufacturer">Manufacturer</option>
+            <option value="Seller">Seller</option>
+            <option value="Customer">Customer</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="email" class="block mb-1 font-medium">Email</label>
+          <input type="email" name="email" id="email" required
+            class="w-full px-3 py-2 border rounded-md bg-gray-50 focus:ring-2 focus:ring-pink-400">
+        </div>
+
+        <div>
+          <label for="password" class="block mb-1 font-medium">Password</label>
+          <input type="password" name="password" id="password" required
+            class="w-full px-3 py-2 border rounded-md bg-gray-50 focus:ring-2 focus:ring-pink-400">
+        </div>
+
+        <div class="flex justify-between items-center text-sm">
+          <button type="button" onclick="openModal()" class="text-pink-500 hover:underline">Forgot Password?</button>
+        </div>
+
+        <button type="submit"
+          class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 rounded-md transition">
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Forgot Password Modal -->
+  <div id="forgotModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60">
+    <div class="bg-white rounded-xl shadow-lg w-full max-w-md p-6 relative">
+      <button onclick="closeModal()"
+        class="absolute top-3 right-3 text-gray-500 hover:text-black text-xl">&times;</button>
+      <h2 class="text-2xl font-bold mb-4 text-center text-pink-600">Forgot Password</h2>
+      <form action="/forgotpassword" method="POST" class="space-y-4">
+        <div>
+          <label for="userType" class="block mb-1">User Type</label>
+          <select name="userType" required class="w-full border px-3 py-2 rounded-md focus:ring-2 focus:ring-pink-400">
+            <option value="Manufacturer">Manufacturer</option>
+            <option value="Seller">Seller</option>
+            <option value="Customer">Customer</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="email" class="block mb-1">Email</label>
+          <input type="email" name="email" required
+            class="w-full border px-3 py-2 rounded-md focus:ring-2 focus:ring-pink-400">
+        </div>
+
+        <div class="text-center">
+          <button type="submit"
+            class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-md font-semibold">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Script -->
+  <script>
+    function openModal() {
+      document.getElementById("forgotModal").classList.remove("hidden");
+    }
+    function closeModal() {
+      document.getElementById("forgotModal").classList.add("hidden");
+    }
+  </script>
+
+</body>
+
+</html>

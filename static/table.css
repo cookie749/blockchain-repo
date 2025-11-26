@@ -1,0 +1,55 @@
+table {
+    width: 100%;
+    max-width: 1400px;
+    border-collapse: collapse;
+    
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #001a80;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+textarea{
+    width: 100%;
+    border: none;
+}
+
+/* Set specific column widths 
+th.question, td.question {
+    width: 10%;
+}
+
+th.similarity_score, td.similarity_score {
+    width: 10%;
+    text-align: center;
+}
+
+th.marks, td.marks {
+    width: 10%;
+    text-align: center;
+}
+
+th.student_answer, td.student_answer, th.correct_answer, td.correct_answer {
+    width: 30%;
+    word-wrap: break-word;
+}
+*/

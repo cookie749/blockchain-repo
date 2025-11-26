@@ -1,0 +1,229 @@
+body {
+  margin: 0;
+  background-color: #e3e3e3;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #001a80;
+  padding: 0 20px;
+  height: 60px; /* Ensure uniform height */
+}
+
+.navbar a {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 10px;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.logo-icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 9px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap; /* Prevents breaking text */
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+}
+
+.navbar a.active {
+  background-color: #ffffff;
+  color: black;
+  border-radius: 20px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Form Styling */
+.form {
+  margin: 0px auto;
+  width: 50%; /* Adjust width to fit your design */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ffffff, #e6f7f9);
+  font-family: Arial, sans-serif;
+}
+
+/* Form Heading */
+.form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #001a80;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Labels */
+form label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Inputs */
+form input[type="text"],
+form input[type="number"],
+form input[type="tel"],
+form input[type="password"],
+form input[type="email"],
+form input[type="date"],
+form input[type="time"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+/* Focus Effect on Inputs */
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: none;
+  border-color: #008080;
+  box-shadow: 0 0 5px rgba(0, 128, 128, 0.5);
+  background-color: #ffffff;
+}
+
+/* Textarea Styling */
+form textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+  width: 100%;
+  background-color: #001a80;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Submit Button */
+form input[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #001a80;
+}
+
+/* Success/Warning Message */
+.flashes {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  color: red;
+  text-align: center;
+}
+
+/* Link Buttons */
+.linkbtn {
+  display: inline-block;
+  text-decoration: none;
+  background: #008080;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.linkbtn:hover {
+  background: #006666;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Row Container for Two Inputs */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+/* Styling for Inputs in the Row */
+.row div {
+  flex: 1;
+}
+
+.row input[type="text"],
+.row input[type="number"],
+.row input[type="email"],
+.row input[type="password"],
+.row select {
+  width: 100%;
+}
